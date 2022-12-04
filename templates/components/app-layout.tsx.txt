@@ -1,0 +1,15 @@
+type Props = {
+  children: React.ReactNode
+}
+
+const AppLayout = ({ children }: Props) => {
+  return (
+    <>
+      <header>header</header>
+      {children}
+      <footer>footer</footer>
+    </>
+  )
+}
+
+export default AppLayout

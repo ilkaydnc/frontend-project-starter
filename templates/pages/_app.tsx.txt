@@ -1,0 +1,19 @@
+import '../styles/main.scss'
+
+import type { AppProps } from 'next/app'
+import { Provider } from 'react-redux'
+
+import store from '@/app/store'
+import AppLayout from '@/components/app-layout'
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <Provider store={store}>
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
+    </Provider>
+  )
+}
+
+export default MyApp
